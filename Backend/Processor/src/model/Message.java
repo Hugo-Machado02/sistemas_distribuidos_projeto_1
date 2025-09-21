@@ -1,10 +1,13 @@
 package model;
 
-public class Mesage {
+public class Message {
     private String name;
     private String message;
 
-    public Mesage(String name, String message) {
+    // Construtor padrão necessário para Jackson
+    public Message() {}
+
+    public Message(String name, String message) {
         this.name = name;
         this.message = message;
     }
@@ -15,6 +18,10 @@ public class Mesage {
 
     public String getMessage() {
         return message;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void setMessage(String message) {
